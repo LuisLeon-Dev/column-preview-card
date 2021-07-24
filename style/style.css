@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark: hsl(179, 100%, 13%);
+    --title-font: 'Big Shoulders Display', cursive;
+    --info-font: 'Lexend Deca', sans-serif;
+}
+
+
+/*
+fonts -> font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+*/
+
+html,
+body {
+    font-size: 15px;
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+.columns {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 70%;
+}
+
+@media (max-width:375px) {
+    .columns {
+        display: inline-block;
+        width: 80%;
+        height: 95%;
+    }
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+@media(max-width:375px) {
+    .col {
+        height: 400px;
+    }
+}
+
+.col_color--1 {
+    background-color: var(--bright-orange)
+}
+
+.col_color--2 {
+    background-color: var(--dark-cyan)
+}
+
+.col_color--3 {
+    background-color: var(--very-dark)
+}
+
+.col_title {
+    font-family: var(--title-font);
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+@media(max-width:375px) {
+    .col_title {
+        font-size: 30px;
+    }
+}
+
+.col_info {
+    font-family: var(--info-font);
+    color: #fff;
+}
+
+@media(max-width:375px) {
+    .col_info {
+        font-size: 13px;
+    }
+}
+
+.col_button {
+    padding: 15px 40px;
+    font-family: var(--info-font);
+    margin-top: 75px;
+    text-transform: capitalize;
+    border-radius: 30px;
+    border-style: solid;
+    cursor: pointer;
+    outline: none;
+}
+
+@media(max-width:375px) {
+    .col_button {
+        padding: 12px 38px;
+        margin-top: 0;
+    }
+}
+
+.col_button--1 {
+    color: var(--bright-orange);
+    border-color: var(--bright-orange);
+}
+
+.col_button--1:hover {
+    background-color: var(--bright-orange);
+    border-color: #fff;
+    color: #fff;
+}
+
+.col_button--2 {
+    color: var(--dark-cyan);
+    border-color: var(--dark-cyan);
+}
+
+.col_button--2:hover {
+    background-color: var(--dark-cyan);
+    border-color: #fff;
+    color: #fff;
+}
+
+.col_button--3 {
+    color: var(--very-dark);
+    border-color: var(--very-dark);
+}
+
+.col_button--3:hover {
+    background-color: var(--very-dark);
+    border-color: #fff;
+    color: #fff;
+}
